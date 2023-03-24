@@ -1,0 +1,68 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Calculadora;
+
+namespace CalculadoraTest
+{
+    [TestClass]
+    public class CalculadoraTest
+    {
+        [TestMethod]
+        public void TestSuma()
+        {
+            int a = 2;
+            int b = 3;
+            int resultadoEsperado = 5;
+
+            int resultadoReal = Calculadora.Operaciones.Sumar(a, b);
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal);
+        }
+
+        [TestMethod]
+        public void TestResta()
+        {
+            int a = 5;
+            int b = 3;
+            int resultadoEsperado = 2;
+
+            int resultadoReal = Calculadora.Operaciones.Restar(a, b);
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal);
+        }
+
+        [TestMethod]
+        public void TestMultiplicacion()
+        {
+            int a = 2;
+            int b = 3;
+            int resultadoEsperado = 6;
+
+            int resultadoReal = Calculadora.Operaciones.Multiplicar(a, b);
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal);
+        }
+
+        [TestMethod]
+        public void TestDivision()
+        {
+            int a = 6;
+            int b = 3;
+            int resultadoEsperado = 2;
+
+            int resultadoReal = Calculadora.Operaciones.Dividir(a, b);
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal);
+        }
+
+        [TestMethod]
+        public void TestMayor()
+        {
+            int[] numeros = new int[] { 2, 5, 3, 8, 1 };
+            int resultadoEsperado = 8;
+
+            int resultadoReal = Calculadora.Operaciones.Mayor(numeros);
+
+            Assert.AreEqual(resultadoEsperado, resultadoReal);
+        }
+    }
+}
